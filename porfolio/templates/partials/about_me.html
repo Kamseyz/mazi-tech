@@ -1,0 +1,73 @@
+{% load static %}
+
+<div class="flex flex-col lg:flex-row w-full max-w-6xl mx-auto my-12 gap-4 lg:gap-8 px-4 font-sans">
+  
+  <div class="card bg-base-200 rounded-xl flex-1 p-8 border-2 border-base-content/10 hover:border-base-content/30 transition-colors">
+    <h2 class="text-3xl font-black mb-8 text-base-content">What I Do</h2>
+    
+    <div class="flex flex-col gap-6">
+      
+      <div class="flex items-center gap-6 group">
+        <img
+          src="{% static 'image/coding.png' %}"
+          alt="Web Development"
+          class="w-16 h-16 lg:w-20 lg:h-20 object-cover rounded-lg border-2 border-base-content grayscale group-hover:grayscale-0 transition-all duration-300"
+        />
+        <div>
+          <h3 class="text-xl font-bold">Web Development</h3>
+          <p class="text-base-content/70 text-sm">Building clean, responsive frontends.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 group">
+        <img
+          src="{% static 'image/api.png' %}"
+          alt="Backend Development"
+          class="w-16 h-16 lg:w-20 lg:h-20 object-cover rounded-lg border-2 border-base-content grayscale group-hover:grayscale-0 transition-all duration-300"
+        />
+        <div>
+          <h3 class="text-xl font-bold">Backend Development</h3>
+          <p class="text-base-content/70 text-sm">Crafting solid architectures with Python, Django, and Go.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 group">
+        <img
+          src="{% static 'image/server.png' %}"
+          alt="Web Hosting"
+          class="w-16 h-16 lg:w-20 lg:h-20 object-cover rounded-lg border-2 border-base-content grayscale group-hover:grayscale-0 transition-all duration-300"
+        />
+        <div>
+          <h3 class="text-xl font-bold">Web Hosting</h3>
+          <p class="text-base-content/70 text-sm">Deploying and managing reliable servers.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider lg:divider-horizontal text-base-content/30 before:bg-base-content/10 after:bg-base-content/10"></div>
+
+  <div class="card bg-base-200 rounded-xl flex-1 p-8 border-2 border-base-content/10 flex flex-col justify-center">
+    <h2 class="text-3xl font-black mb-6 text-base-content">About Me</h2>
+    
+    <div class="space-y-4 mb-8">
+      <p class="text-lg text-base-content/80 leading-relaxed">
+        My name is Dike Ebuka Christopher. I am a Computer Science graduate from the University of COOU.
+      </p>
+      <p class="text-lg text-base-content/80 leading-relaxed">
+        Hummm.... honestly, I am lazy to type too much grammar here. Just download my resume below to see the full story and all the serious tech stuff. &#128514;
+      </p>
+    </div>
+
+    <div class="mt-auto">
+      <a href="{% static 'docs/resume.pdf' %}" class="btn btn-neutral btn-lg rounded-none w-full sm:w-auto hover:-translate-y-1 transition-transform shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        Download My Resume
+      </a>
+    </div>
+  </div>
+
+</div>

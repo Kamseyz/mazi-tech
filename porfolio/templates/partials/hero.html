@@ -1,0 +1,48 @@
+{% load static %}
+
+<div class="min-h-screen bg-base-100 flex items-center justify-center px-6 lg:px-12 py-12 font-sans">
+  <div class="flex flex-col lg:flex-row-reverse items-center justify-between w-full max-w-6xl gap-12 lg:gap-20">
+    
+    <div class="relative w-full max-w-sm lg:w-1/2 flex flex-col items-center">
+      <div class="relative group">
+        <div class="absolute inset-0 bg-base-content translate-x-3 translate-y-3 rounded-xl transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
+        <img
+          src="{% static 'image/me.jpeg' %}"
+          alt="Dike Ebuka Christopher"
+          class="relative w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-xl border-2 border-base-content z-10 grayscale hover:grayscale-0 transition-all duration-500"
+        />
+      </div>
+      
+      <div class="mt-8 bg-base-200 px-4 py-2 border-l-4 border-base-content text-sm font-medium text-base-content/90 flex items-center gap-2 shadow-sm">
+        <i>Sorry, but this image is old</i> <span>&#128514;</span>
+      </div>
+    </div>
+
+    <div class="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 border border-base-300 rounded text-xs font-bold uppercase tracking-widest text-base-content/70">
+        <span class="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+        Mazi-Tech
+      </div>
+      
+      <h1 class="text-5xl lg:text-7xl font-black tracking-tight text-base-content">
+        Hello.<br/>
+        I'm Ebuka.
+      </h1>
+      
+      <p class="text-lg text-base-content/80 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+        I am Dike Ebuka Christopher. I build solid backend systems and web applications with Python and Django. When I'm not diving into Go microservices, I'm probably figuring out why my Tailwind classes aren't working.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start pt-4">
+        <button class="btn btn-neutral btn-lg rounded-none hover:-translate-y-1 transition-transform">
+          Got a Project?
+        </button>
+        <button class="btn btn-outline btn-lg rounded-none hover:-translate-y-1 transition-transform">
+          View My Work
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>
