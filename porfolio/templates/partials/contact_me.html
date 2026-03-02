@@ -1,0 +1,53 @@
+{% load static %}
+<div id="contact" class="w-full max-w-5xl mx-auto my-20 px-4">
+  
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-error{% endif %} shadow-lg mb-8 max-w-4xl mx-auto">
+        <span>{{ message }}</span>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-base-200 shadow-xl rounded-2xl overflow-hidden">
+    
+    <div class="p-8 lg:p-12 bg-neutral text-neutral-content flex flex-col justify-center">
+      <h2 class="text-4xl font-black mb-6">Let's Talk.</h2>
+      <p class="text-lg text-neutral-content/80 mb-8 leading-relaxed">
+        Got a project in mind, need a solid backend architecture, or just want to chat about Python and Go? Send me a message.
+      </p>
+      
+      <div class="mt-auto">
+        <p class="font-bold mb-4 uppercase tracking-widest text-sm text-neutral-content/60">Fastest Response</p>
+        <a href="https://wa.me/2348151772213" target="_blank" class="btn btn-outline btn-success bg-white btn-lg w-full sm:w-auto shadow-lg hover:-translate-y-1 transition-transform border-none">
+          <img src="{% static 'image/whatsapp.png' %}" alt="WhatsApp" class="w-6 h-6 mr-2" />
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="p-8 lg:p-12">
+      <form method="POST" action="{% url 'contact' %}" class="space-y-6">
+        {% csrf_token %}
+        
+        <div class="form-control w-full">
+          <label class="label"><span class="label-text font-bold">Your Name</span></label>
+          <input type="text" name="name" placeholder="Ebuka Dike" class="input input-bordered w-full bg-base-100" required />
+        </div>
+          
+        <div class="form-control w-full">
+          <label class="label"><span class="label-text font-bold">Your Email</span></label>
+          <input type="email" name="email" placeholder="ebuka@mazitech.com" class="input input-bordered w-full bg-base-100" required />
+        </div>
+
+        <div class="form-control w-full">
+          <label class="label"><span class="label-text font-bold">Message</span></label>
+          <textarea name="message" class="textarea textarea-bordered h-32 bg-base-100" placeholder="Tell me about your project..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-full shadow-md">Send Message</button>
+      </form>
+    </div>
+    
+  </div>
+</div>
